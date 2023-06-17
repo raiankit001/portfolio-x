@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prompt:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+==============================
+||  ScrollBar
+===============================
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #263f6b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--red-color);
+    border-radius: 30px;
+}
+
+
+/* 
+===============================
+||  navbar , footer
+===============================
+*/
+
+
+.navbar1 {
+    background-color: rgba(0, 0, 0, 0.026);
+    font-size: 1.3rem;
+    padding: 10px;
+    position: relative;
+    z-index: 6;
+    /* border-bottom: 1px solid var(--white-color); */
+}
+
+.navbar1 a,
+.footer a {
+    padding-bottom: 5px;
+    margin-right: 20px;
+    color: var(--white-color);
+    position: relative;
+}
+
+.navbar1 a::before,
+.footer a::before {
+    content: " ";
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--red-color);
+    transition: all 1s;
+}
+
+.navbar1 a:hover::before,
+.footer a:hover::before {
+    width: 100%;
+}
+
+
+.navbar2 {
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+    /* background-color: var(--secondary-color); */
+}
+
+.logo {
+    cursor: pointer;
+    font-family: var(--font1);
+    color: var(--red-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.logo:hover {
+    text-shadow: 0 0 5px var(--white-color);
+}
+
+.nav a {
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--white-color);
+    font-size: 1.2rem;
+    position: relative;
+    margin-right: 10px;
+}
+
+.nav a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.nav a:hover::before {
+    width: 100%;
+}
+
+
+
+.navcol{
+    background-color: var(--primary-color);
+
+}
+
+
+/* 
+===============================
+||  page-1
+===============================
+*/
+.page-1::after {
+    background-image: url(assets/seanry-2.jpg);
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 120vh;
+    top: -220px;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(25%);
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.page-1 {
+    position: relative;
+    background-color: var(--secondary-color)/0.26;
+    backdrop-filter: brightness(10%);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    color: var(w);
+}
+.page-1 .col {
+    color: var(--white-color);
+}
+.fa-bars{
+    display: none;
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+.page-1 h5,
+.page-4 h5 {
+    font-size: 2rem;
+    border: 3px solid black;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--black-color);
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.page-1 h5::before {
+    content: " ";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--black-color);
+    bottom: -20px;
+    right: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+}
+
+.page-1 h1 {
+    font-size: 6.5rem;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--red-color);
+    position: relative;
+}
+
+.page-1 h1::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: var(--red-color);
+    transition: 2s;
+}
+
+.page-1 h1:hover::before {
+    width: 100%;
+}
+
+.page-1 h2 {
+    font-size: 3rem;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+.page-1 span {
+    color: var(--red-color);
+}
+
+
+
+.page-1 .dotImg {
+    position: absolute;
+    left: 75%;
+    top: 60%;
+    width: 250px;
+    mix-blend-mode: lighten;
+}
+
+.page-1 .dotImg2 {
+    z-index: 2;
+    position: absolute;
+    left: 50vw;
+    top: 13vw;
+    width: 200px;
+    mix-blend-mode: lighten;
+}
+
+.page-1 .pp {
+    
+    margin: auto;
+    z-index: 1;
+    max-width: 40vw;
+    min-width: 350px;
+    transform: translateY(0px);
+    animation: floaty 6s ease-in-out infinite;
+}
+
+@keyframes floaty {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+/* 
+===============================
+||  page-2
+===============================
+*/
+
+
+.page-2 {
+    color: white;
+    height: fit-content;
+    background-color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+
+
+.page-2 h2{
+    margin-top: 50px;
+}
+
+
+
+.box {
+    position: relative;
+    max-width: 30vw;
+    min-width: 350px;
+    background-color: var(--primary-color);
+    margin-right: 30px;
+    border-radius: 10px;
+    border-radius: 10px;
+    margin: auto;
+    transition: .5s;
+}
+
+.box:hover {
+    height: 80vh;
+}
+
+.box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.imgbox {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    height: 50vh;
+    width: 25vw;
+    min-width: 300px;
+    
+    scale: 1.2;
+    transition: scale 1s ease-in-out,top 4s ease-in-out;
+}
+
+.box:hover .imgbox {
+    top: -150px;
+    scale: .5;
+}
+.txtbox h2{
+    font-size: 2rem;
+    padding-bottom: 0 !important;
+    margin: 0;
+
+}
+.txtbox {
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    padding: 20px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+.box:hover .txtbox{
+    height: 100%;
+    top: 100px;
+}
+
+
+.bar{
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.338);
+    height: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.bar span{
+    height: 15px;
+    float: left;
+    background-color: var(--red-color);
+}
+
+.html{
+    width: 80%;
+}
+.css{
+    width: 85%;
+}
+.javascript{
+    width: 15%;
+}
+.bootstrap{
+    width: 60%;
+}
+.corejava{
+    width: 85%;
+}
+
+.box:hover .html{
+    animation: html 3s;  
+}
+
+.box:hover .css{
+    animation: css 3s;  
+}
+
+.box:hover .javascript{
+    animation: javascript 3s;  
+}
+
+.box:hover .corejava{
+    animation: corejava 3s;  
+}
+
+.box:hover .bootstrap{
+    animation: bootstrap 3s;  
+}
+
+
+@keyframes html{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes javascript{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 15%;
+    }
+}
+@keyframes bootstrap{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes corejava{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 88%;
+    }
+}
+
+.count{
+    padding-top: 15px !important;
+    float: right;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+.txtbox p{
+    margin: 0 !important;
+    padding: 0;
+    font-size: 20px;
+    line-height: .5rem;
+    display: inline-block;
+}
+
+.page-2 .col{
+    margin: 100px;
+}
+
+.page-2 .col-2 {
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+
+.page-2 p a {
+    color: var(--red-color);
+}
+
+.page-2 span {
+    color: var(--red-color);
+}
+
+.page-2 h2 {
+    text-align: left;
+    font-family: var(--font1);
+    padding: 50px 0;
+    display: inline-block;
+}
+
+.page-2 p {
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+
+
+
+/*
+===============================
+||  page-3
+===============================
+*/
+.page-3,
+.page-4 {
+    background-color: var(--secondary-color);
+    min-height: 80vh;
+}
+
+.page-2 .p2h2,
+.page-3 h2,
+.page-4 h2 {
+    position: relative;
+    left: -210px;
+    border-radius: 50px;
+    font-size: 3rem;
+    padding: 20px 90px;
+    color: var(--white-color);
+    font-family: var(--font4);
+    background-color: var(--primary-color);
+    width: fit-content;
+    box-shadow: 2px 2px 5px black;
+}
+
+.page-3 p {
+    margin: 20px;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: var(--white-color);
+}
+
+.page-3 img {
+    width: 100%;
+}
+
+.page-3 .row-1,
+.page-3 .row-3 {
+    justify-content: end;
+}
+
+.page-3 .row-2 {
+    justify-content: start;
+}
+
+.page-3 .card {
+    margin: 40px;
+    transition: all 1s 1s;
+
+}
+
+.page-3 .col h3,
+.footer h2 {
+    color: white;
+    margin: 0 20px;
+    font-size: 2rem;
+    position: relative;
+}
+
+.card .row {
+    float: right;
+}
+
+.card .row-2 {
+    float: left;
+}
+
+.page-3 .col h3::after,
+.footer h2::after {
+    content: " ";
+    background-color: var(--red-color);
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transition: all .5s;
+}
+
+.page-3 .card:hover {
+    scale: 1.2;
+    position: relative;
+    box-shadow: -3px 2px 1px red, 3px -2px 1px #00FFFF, 0 0 100px black;
+    transform: rotate(-3deg);
+}
+
+.page-3 .card:hover h3::after,
+.footer h2:hover::after {
+    width: 100%;
+}
+
+.page-3 .card p {
+    font-size: 1rem;
+}
+
+.page-3 .col .text-box {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9977240896358543) 17%, rgba(0, 0, 0, 0.45710784313725494) 89%, rgba(0, 0, 0, 0) 100%);
+    transform: translateY(-50px);
+    min-height: 190px;
+    transition: all 0.5s ease 0.5s;
+    padding-bottom: 5px;
+}
+
+.page-3 .row .card:hover .text-box {
+    transform: translateY(-100%);
+}
+
+
+/*
+===============================
+||  page-4
+===============================
+*/
+.page-4 {
+    position: relative;
+    background-color: transparent !important;
+}
+
+.page-4::after {
+    background-image: url(assets/seanry-2.jpg);
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 150%;
+    top: -220px;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(25%);
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.page-4 .col-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    padding: 40px 0;
+}
+
+
+.page-4 .a {
+    font-size: 1.5rem;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+form {
+    border: 2px solid black;
+    width: 50vw;
+    padding: 50px;
+    color: var(--white-color);
+}
+
+form {
+    border: none;
+    font-size: 1.5rem;
+}
+
+form input,
+form textarea {
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin: 20px 0;
+    display: block;
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    resize: none;
+}
+
+form .btn {
+    float: right;
+}
+
+.page-4 .tild-2 {
+    color: var(--white-color);
+    width: 300px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    transform: rotate(7deg);
+    font-size: 1.3rem;
+}
+
+/*
+===============================
+||  footer
+===============================
+*/
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 0 0 50px;
+}
+
+.footer a {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: var(--white-color);
+}
+
+.footer h2 {
+    font-family: var(--font4);
+    display: inline-block;
+    padding:30px 0 15px;
+}
+
+.footer .glitch {
+    transform-origin: 50px;
+}

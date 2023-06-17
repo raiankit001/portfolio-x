@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Permanent+Marker&display=swap');
+
+:root{
+    --font1: 'Great Vibes', cursive;;
+    --font2: ;
+    --font3: 'Permanent Marker', cursive;
+    --primary-color:#213559;
+    --secondary-color:#263f6b;
+    --red-color: rgb(199, 23, 23);
+    --white-color: #fff;
+    --black-color: #000;
+}
+body{
+    background-color: var(--secondary-color );
+}
+*:focus {
+    outline: none;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;   
+}
+.wrap-rev{
+    display: flex;
+    flex-wrap: wrap-reverse;   
+    
+}
+.container{
+    width: 80vw;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+}
+.btn a{
+    display: inline-block;
+}
+.btn-1{
+    color: var(--red-color);
+    background-color: transparent;
+    border: 2px solid var(--red-color);
+    transition: .5s ease-in-out;
+}
+.btn-1:hover{
+    background-color: var(--red-color);
+    color: var(--white-color);
+}
+a{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.a {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.a::before {
+    content: " ";
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--red-color);
+    transition: all 1s;
+}
+
+.a:hover::before {
+    width: 100%;
+}
+.tild{
+    transition: all .5s;
+}
+.tild:hover{
+    transform: rotate(-5deg);
+}
+
+
+.glitch:hover{
+    text-shadow: -3px 3px 2px red,3px -3px 2px blue
+}
+
+.tenvh{
+    padding-top: 100px;
+    background-color: var(--secondary-color);
+}
+.card{
+    height: 301px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.b-right{
+    border-right: 2px solid var(--red-color);
+}
+img{
+    width: 100%;
+}
+
+li{
+    margin: 0;padding: 0;
+    list-style: none;
+}
+
+.fvh{
+    height: 10vh;
+}
